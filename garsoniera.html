@@ -1,6 +1,10 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>*,*::before,*::after{box-sizing:border-box}body{margin:0;font-size:14px}[hidden]{display:none!important}img{max-width:100%}</style>
 <title>Garsonieră 28 m²</title>
-<meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Manrope:wght@400;500;700&display=swap">
 <style>
 /* Layout: full-bleed 3D canvas, floating glass bars top and bottom, list drawer top-right */
@@ -54,19 +58,24 @@ details[open] summary::after{content:" ▴"}
 .list ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:3px}
 .list li{display:flex;justify-content:space-between;gap:12px}
 .list li span:last-child{color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.list a{color:inherit;text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:2px}
 .list p{margin:0;color:var(--muted);font-size:12px;line-height:1.45}
 .swatches{display:flex;align-items:center;gap:6px;padding:6px 12px 6px 8px}
 .sw{width:26px;height:26px;border-radius:50%;border:2px solid var(--line);padding:0}
 .sw[aria-pressed="true"]{border-color:var(--accent);box-shadow:0 0 0 2px var(--panel) inset}
 #scheme-name{font-size:13px;font-weight:500;margin-left:4px;white-space:nowrap}
-#remote{position:absolute;left:max(12px,env(safe-area-inset-left,0px));top:84px;padding:10px;display:flex;flex-direction:column;gap:8px;width:160px}
-.rh{display:flex;justify-content:space-between;align-items:baseline;font-size:12px;color:var(--muted)}
-.rh output{font-family:var(--display);font-size:17px;color:var(--ink);font-variant-numeric:tabular-nums}
+#remote{position:absolute;left:max(12px,env(safe-area-inset-left,0px));right:auto;top:84px;bottom:auto;width:200px;max-height:none;overflow:visible}
+#remote summary{display:flex;align-items:baseline;gap:8px;padding:9px 12px}
+#remote summary span{font-size:13px;font-weight:700}
+#remote summary output{margin-left:auto;font-family:var(--display);font-size:17px;font-variant-numeric:tabular-nums}
+.rbody{padding:0 10px 10px;display:flex;flex-direction:column;gap:8px}
 .rb{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.rb3{grid-template-columns:1fr 1fr 1fr}.rb3 button{font-size:12px}
+.rnote{font-size:11px;color:var(--muted);line-height:1.3}
 .rb button{padding:7px 0;border-radius:9px;background:var(--line);font-size:13px;font-weight:600;user-select:none;-webkit-user-select:none;touch-action:none}
 .rb button:active,.rb button.on{background:var(--accent);color:var(--accent-ink)}
 @media (max-width:560px){
-  #remote{top:74px}
+  #remote{top:74px;bottom:auto}
   #scheme-name{display:none}
   .name span{display:none}
   details{top:auto;bottom:calc(128px + env(safe-area-inset-bottom,0px))}
@@ -74,6 +83,8 @@ details[open] summary::after{content:" ▴"}
 }
 </style>
 
+</head>
+<body>
 <div id="app">
   <canvas id="c" tabindex="0" aria-label="Model 3D al apartamentului"></canvas>
 
@@ -90,51 +101,61 @@ details[open] summary::after{content:" ▴"}
     <summary>Lista de mobilier</summary>
     <div class="list">
       <div><h3>Dormitor</h3><ul>
-        <li><span>Pat dublu + saltea</span><span>140×200</span></li>
-        <li><span>Noptiere ×2</span><span>45×40</span></li>
-        <li><span>Dulap cu uși glisante</span><span>190×60, h220</span></li>
-        <li><span>Birou electric reglabil, 2 motoare</span><span>160×70, h62–127</span></li>
+        <li><span>Pat dublu pe picioare + saltea (banda de mers încape dedesubt)</span><span>140×200</span></li>
+        <li><span><a href="https://www.dedeman.ro/ro/dulap-dormitor-albi-180-og-alb-2-usi-glisante-cu-oglinda-180-x-60-x-215-5-cm-7c/p/8119389" target="_blank" rel="noopener">Dulap Dedeman Albi 180 OG, alb, uși glisante cu oglindă</a></span><span>180×60, h215</span></li>
+        <li><span><a href="https://altex.ro/mobila/cpl/filtru/brand-3334/stabledesk/" target="_blank" rel="noopener">Birou StableDesk Pro, doar cadru negru</a>, blat nuc la tâmplar, 2 motoare, 3 memorii</span><span>160×80, h64,5–130,5</span></li>
+        <li><span>Bandă de mers sub birou (walking pad)</span><span>127×52, h13</span></li>
         <li><span>Scaun de gaming</span><span></span></li>
         <li><span>Monitor 27″ + 2 suporturi laptop</span><span></span></li>
         <li><span>PC desktop (mai târziu)</span><span>45×21, h47</span></li>
         <li><span>Aer condiționat de perete, 9000 BTU</span><span>75×21, h29</span></li>
-        <li><span>Comodă joasă cu sertare</span><span>110×40</span></li>
-        <li><span>Covor</span><span>160×200</span></li>
-        <li><span>Draperii, plantă, tablou</span><span></span></li>
+        <li><span><a href="https://www.dedeman.ro/ro/comoda-dormitor-stefan-cu-3-sertare-alb-k524-90-x-75-x-40-cm-1c/p/8704863" target="_blank" rel="noopener">Comodă Dedeman Stefan, 3 sertare, albă</a></span><span>90×40, h75</span></li>
+        <li><span><a href="https://www.hornbach.ro/p/covor-modern-florence-6177-gri-albastru-80x150-cm/12699844/" target="_blank" rel="noopener">Covor Hornbach Florence, gri-albastru, lângă pat</a></span><span>80×150</span></li>
+        <li><span><a href="https://www.hornbach.ro/p/draperie-blackout-cu-rejansa-universala-solevito-samalut-gri-135x245-cm/12729199/" target="_blank" rel="noopener">Draperii blackout Solevito Samalut gri, 2 buc.</a> (rând față, 2×115 lei)</span><span>135×245</span></li>
+        <li><span><a href="https://www.hornbach.ro/p/perdea-cu-rejansa-solevito-voile-uni-alba-300x245-cm/5743522/" target="_blank" rel="noopener">Perdea Solevito Voile albă, 1 buc.</a> (rând spate, 79,90 lei)</span><span>300×245</span></li>
+        <li><span><a href="https://www.hornbach.ro/p/set-accesorii-sina-sn2-200-cm/12209787/" target="_blank" rel="noopener">Călăreți șină tavan SN2, set 40 buc.</a> (14,90 lei)</span><span>~20/canal</span></li>
+        <li><span><a href="https://www.hornbach.ro/p/set-100-agrafe-perdea/6737289/" target="_blank" rel="noopener">Agrafe perdea, set 100 buc.</a> (21,50 lei, dacă călăreții n-au cârlig)</span><span></span></li>
+        <li><span>Noptieră: de ales (?)</span><span>max. ~30 cm lățime</span></li>
+        <li><span>Tablou deasupra patului</span><span></span></li>
       </ul></div>
       <div><h3>Bucătărie</h3><ul>
         <li><span>Corpuri inferioare + chiuvetă</span><span>250×60</span></li>
         <li><span>Corpuri suspendate + hotă</span><span>250×35</span></li>
-        <li><span>Combină frigorifică</span><span>60×60, h185</span></li>
-        <li><span>Aragaz electric, plită vitroceramică</span><span>60×60, h85</span></li>
-        <li><span>Mașină de spălat vase, 45 cm</span><span>45×55, h82</span></li>
+        <li><span>Corp cu 3 sertare + blat (în locul frigiderului)</span><span>45×60</span></li>
+        <li><span>Plită inducție Bosch Seria 4, 4 zone (semnale sonore setate pe 0)</span><span>60×52</span></li>
+        <li><span><a href="https://altex.ro/cuptoare-incorporabile/cpl/filtru/brand-3334/beko/stock-stores-ids/245-altex-oradea-era-shopping-park/" target="_blank" rel="noopener">Cuptor încorporabil Beko cu piroliză, negru (Altex)</a></span><span>60×60, 72 L</span></li>
+        <li><span>Mașină de spălat vase încorporabilă, 60 cm (14 seturi)</span><span>60×55, h82</span></li>
         <li><span>Masă + 2 scaune</span><span>70×55</span></li>
       </ul></div>
       <div><h3>Hol</h3><ul>
-        <li><span>Mașină de spălat rufe</span><span>60×55, h85</span></li>
-        <li><span>Dulap înalt (haine, aspirator)</span><span>60×60, h220</span></li>
-        <li><span>Dulăpior deasupra ei</span><span>60×35, h60</span></li>
+        <li><span>Mașină de spălat Miele (stânga, lângă pilastru)</span><span>60×64, h85</span></li>
+        <li><span>Dulap haine deasupra mașinii</span><span>60×60, h150</span></li>
+        <li><span>Combină frigorifică Beko încorporabilă + corp coloană (dreapta, deschidere pe dreapta)</span><span>60×60, h245</span></li>
         <li><span>Bancă pentru încălțăminte + oglindă</span><span>80×30</span></li>
         <li><span>Preș</span><span>80×50</span></li>
       </ul></div>
       <div><h3>Baie</h3><ul>
         <li><span>Obiectele sanitare existente rămân</span><span></span></li>
       </ul></div>
-      <p>Folosește cercurile colorate de jos ca să încerci alte finisaje. Dimensiunile camerelor sunt estimate din poze; cu măsurătorile reale, modelul poate fi corectat.</p>
+      <p>Finisaje: bleumarin & nuc. Dimensiunile camerelor sunt estimate din poze; cu măsurătorile reale, modelul poate fi corectat.</p>
     </div>
   </details>
 
-  <div id="remote" class="glass" role="group" aria-label="Telecomandă înălțime birou">
-    <div class="rh"><span>Birou</span><output id="desk-h">72 cm</output></div>
+  <details id="remote" class="glass" open>
+    <summary aria-label="Telecomandă înălțime birou"><span>Birou</span><output id="desk-h">77 cm</output></summary>
+    <div class="rbody">
     <div class="rb">
       <button id="d-down" aria-label="Coboară biroul">▼</button>
       <button id="d-up" aria-label="Ridică biroul">▲</button>
     </div>
-    <div class="rb">
+    <div class="rb rb3">
       <button id="d-sit">Șezut</button>
-      <button id="d-stand">În picioare</button>
+      <button id="d-stand">Picioare</button>
+      <button id="d-walk">Mers</button>
     </div>
-  </div>
+    <div class="rnote" id="desk-note">Memorii setate pentru 186 cm</div>
+    </div>
+  </details>
   <div id="hint" class="glass"></div>
   <div id="joy" class="glass" hidden><div id="knob"></div></div>
 
@@ -145,7 +166,7 @@ details[open] summary::after{content:" ▴"}
       <button data-go="bath">Baie</button>
       <button data-go="hall">Hol</button>
     </div>
-    <div id="swatches" class="swatches glass" role="group" aria-label="Schemă de culori"><span id="scheme-name"></span></div>
+    <div id="swatches" class="swatches glass" role="group" aria-label="Schemă de culori" hidden><span id="scheme-name"></span></div>
     <label class="toggle glass"><input type="checkbox" id="furnished" checked> Mobilat</label>
   </nav>
 </div>
@@ -342,37 +363,48 @@ colliders.push({x0:1.05,x1:1.47,z0:4.84,z1:5.28});
  bx(1.55,1.95,.4,.82,5.36,5.53,ceramic); colliders.push({x0:1.55,x1:1.95,z0:4.92,z1:5.54});}
 
 /* ---------- furniture (toggleable) ---------- */
-// bed
-bx(.06,2.08,0,.3,1.58,3.02,oak,furn,true);
-bx(.06,.13,0,1.05,1.5,3.1,oakDark,furn);
-bx(.13,2.04,.3,.52,1.6,3.0,sheetM,furn);
-bx(.6,2.1,.5,.6,1.56,3.04,sage,furn);
-bx(1.9,2.1,.42,.6,1.56,3.04,sage,furn);
-bx(.18,.55,.52,.66,1.68,2.25,linen,furn); bx(.18,.55,.52,.66,2.35,2.92,linen,furn);
-bx(.62,1.0,.6,.62,1.56,3.04,TM(fabricT,.1,'#d9cfbf',{roughness:1}),furn);
-// nightstands + lamps
-for(const [z0,z1] of [[1.08,1.5],[3.08,3.42]]){bx(.06,.48,0,.5,z0,z1,oak,furn,true);bx(.1,.44,.22,.24,z0+.03,z1-.03,oakDark,furn);
-  const zc=(z0+z1)/2; cyl(.25,zc,.5,.78,.015,charcoal,furn); cyl(.25,zc,.72,.9,.09,warm,furn,.12)}
-// wall print above bed
-bx(.06,.085,1.25,1.75,2.0,2.62,M('#2f3a35'),furn); bx(.085,.09,1.29,1.71,2.04,2.58,M('#d7c6a6'),furn);
-// rug
-bx(1.0,2.75,0,.012,1.25,3.35,rugM,furn);
-// wardrobe
-bx(.06,1.96,0,2.2,3.45,4.04,carcM,furn,true);
-bx(.06,1.96,0,.06,3.44,3.45,oakDark,furn); bx(1.0,1.02,.06,2.2,3.443,3.45,M('#cfcac0'),furn);
-for(const x of[.94,1.08]) bx(x-.01,x+.01,.9,1.3,3.43,3.445,charcoal,furn);
+// bed 140x200 in the corner left of the door: head on the side wall, feet toward the door; on legs so the walking pad slides under
+bx(.06,.12,0,1.0,2.54,4.03,oakDark,furn);                                   // headboard on the side wall
+bx(.12,2.10,.16,.32,2.56,4.02,oak,furn,true);                               // base on legs
+for(const x of[.16,2.0]) for(const z of[2.6,3.92]) bx(x,x+.05,0,.16,z,z+.05,charcoal,furn);
+bx(.14,2.08,.32,.54,2.60,3.98,sheetM,furn);                                 // mattress
+bx(.90,2.12,.52,.62,2.56,4.02,sage,furn);                                   // duvet
+bx(2.10,2.12,.38,.62,2.56,4.02,sage,furn); bx(.90,2.12,.38,.62,2.54,2.56,sage,furn); // duvet drape at the foot and the room side
+bx(.16,.56,.54,.68,2.68,3.24,linen,furn); bx(.16,.56,.54,.68,3.34,3.90,linen,furn);  // pillows
+bx(1.60,1.95,.62,.64,2.55,4.03,TM(fabricT,.1,'#d9cfbf',{roughness:1}),furn);        // throw
+// wall print above the bed
+bx(.06,.085,1.15,1.65,2.95,3.65,M('#2f3a35'),furn); bx(.085,.09,1.19,1.61,2.99,3.61,M('#d7c6a6'),furn);
+// rug between wardrobe, bed and desk
+bx(.40,1.90,0,.012,1.75,2.55,rugM,furn); // Florence 80x150 beside the bed; chair stays on the floor
+// wardrobe next to the bed on the same side wall: Dedeman Albi 180 OG, white, 2 sliding mirror doors, 180x60x215.5
+bx(.06,.66,0,2.155,.30,2.10,carcM,furn,true);
+bx(.06,.69,2.12,2.155,.30,2.10,carcM,furn); bx(.06,.69,0,.05,.30,2.10,carcM,furn);           // top and bottom rails
+const mirrorM=M('#c3d0d6',{metalness:.25,roughness:.12});
+for(const [x0,z0,z1] of [[.665,.31,1.23],[.68,1.17,2.09]]){
+  bx(x0,x0+.012,.05,2.12,z0,z1,carcM,furn);                                                  // door frame
+  bx(x0+.012,x0+.014,.12,2.05,z0+.06,z1-.06,mirrorM,furn);}                                  // mirror panel
+// nightstand placeholder (not chosen yet): ghost box 30x25x59 with a question mark
+{const z0=2.20,z1=2.50,x0=.06,x1=.31,h=.59;
+ const g=new THREE.BoxGeometry(x1-x0,h,z1-z0);
+ const ghost=new THREE.Mesh(g,new THREE.MeshBasicMaterial({color:'#8fa3c4',transparent:true,opacity:.18,depthWrite:false}));
+ ghost.position.set((x0+x1)/2,h/2,(z0+z1)/2); furn.add(ghost);
+ const edges=new THREE.LineSegments(new THREE.EdgesGeometry(g),new THREE.LineDashedMaterial({color:'#3f5474',dashSize:.03,gapSize:.02}));
+ edges.computeLineDistances(); edges.position.copy(ghost.position); furn.add(edges);
+ const t=canvasTex(128,128,(c,w,hh)=>{c.fillStyle='rgba(255,255,255,.92)';c.beginPath();c.arc(64,64,56,0,6.283);c.fill();
+   c.strokeStyle='#3f5474';c.lineWidth=6;c.stroke();c.fillStyle='#3f5474';c.font='700 76px Manrope, system-ui, sans-serif';c.textAlign='center';c.textBaseline='middle';c.fillText('?',64,70)});
+ const q=new THREE.Sprite(new THREE.SpriteMaterial({map:t,transparent:true,depthTest:false}));q.scale.set(.22,.22,1);q.position.set((x0+x1)/2,h+.18,(z0+z1)/2);q.renderOrder=11;furn.add(q);}
 // electric standing desk 160x70: everything on the top rides in deskTop, which the remote moves
 const deskTop=new THREE.Group(); furn.add(deskTop);
-bx(2.54,3.24,.72,.75,.45,2.05,oak,deskTop); colliders.push({x0:2.54,x1:3.24,z0:.45,z1:2.05,f:true});
-bx(2.62,3.16,.68,.72,.55,1.95,charcoal,deskTop);                                   // frame
+bx(2.44,3.24,.72,.75,.45,2.05,oak,deskTop); colliders.push({x0:2.44,x1:3.24,z0:.45,z1:2.05,f:true}); // 160x80 top
+bx(2.52,3.16,.68,.72,.55,1.95,charcoal,deskTop);                                   // frame
 for(const z of[.56,1.94]){
-  bx(2.6,3.2,0,.035,z-.04,z+.04,charcoal,furn);                                     // foot
-  bx(2.85,2.95,.035,.58,z-.04,z+.04,charcoal,furn);                                 // outer column (fixed)
-  bx(2.865,2.935,.2,.68,z-.03,z+.03,steel,deskTop);}                                // inner column (lifts)
+  bx(2.5,3.2,0,.035,z-.04,z+.04,charcoal,furn);                                     // foot
+  bx(2.85,2.95,.035,.66,z-.04,z+.04,charcoal,furn);                                 // outer column (fixed)
+  bx(2.865,2.935,.06,.68,z-.03,z+.03,steel,deskTop);}                                // inner column (lifts)
 // handset on the front edge
-bx(2.5,2.56,.69,.73,.56,.74,M('#1b1d1f',{roughness:.4}),deskTop);
-bx(2.497,2.5,.70,.72,.6,.66,new THREE.MeshStandardMaterial({color:'#ffd9a0',emissive:'#ffb347',emissiveIntensity:1}),deskTop);
-for(const z of[.68,.71]) bx(2.495,2.5,.70,.72,z-.008,z+.008,steel,deskTop);
+bx(2.40,2.46,.69,.73,.56,.74,M('#1b1d1f',{roughness:.4}),deskTop);
+bx(2.397,2.40,.70,.72,.6,.66,new THREE.MeshStandardMaterial({color:'#ffd9a0',emissive:'#ffb347',emissiveIntensity:1}),deskTop);
+for(const z of[.68,.71]) bx(2.395,2.40,.70,.72,z-.008,z+.008,steel,deskTop);
 bx(2.6,3.15,.75,.753,.65,1.85,TM(fabricT,.1,'#1e2124',{roughness:1}),deskTop);       // desk mat
 bx(3.02,3.04,.93,1.3,.94,1.56,black,deskTop); bx(3.04,3.06,.95,1.28,.96,1.54,M('#0d1a24',{roughness:.1}),deskTop); // 27" monitor
 bx(3.06,3.1,.75,.95,1.21,1.29,charcoal,deskTop); bx(2.98,3.15,.75,.76,1.13,1.37,charcoal,deskTop);
@@ -397,7 +429,8 @@ function chair(x,z,rot,mat){const g=new THREE.Group();g.position.set(x,0,z);g.ro
   for(const [a,b] of [[-.18,-.18],[.18,-.18],[-.18,.18],[.18,.18]]) p(.03,.46,.03,a,.23,b,charcoal);
   furn.add(g)}
 // gaming chair facing the desk
-{const g=new THREE.Group();g.position.set(2.18,0,1.25);g.rotation.y=-Math.PI/2;
+const chairG=new THREE.Group();
+{const g=chairG;g.position.set(2.06,0,1.25);g.rotation.y=-Math.PI/2;
  const cm=TM(fabricT,.1,'#26292c',{roughness:.8}), acc=frontM;
  const p=(w,h,d,x,y,z,m=cm,rx=0)=>{const k=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),m);k.position.set(x,y,z);k.rotation.x=rx;g.add(k);return k};
  p(.52,.09,.5,0,.5,0); p(.5,.78,.08,0,.98,.27,cm,-.12); p(.28,.14,.07,0,1.45,.33,acc,-.12); p(.12,.5,.085,0,.98,.27,acc,-.12).position.x=0;
@@ -405,24 +438,33 @@ function chair(x,z,rot,mat){const g=new THREE.Group();g.position.set(x,0,z);g.ro
  p(.06,.32,.06,0,.3,0,charcoal);
  for(let i=0;i<5;i++){const a=i/5*6.283,k=p(.04,.03,.3,Math.sin(a)*.15,.05,Math.cos(a)*.15,charcoal);k.rotation.y=a}
  furn.add(g)}
-colliders.push({x0:1.92,x1:2.44,z0:1.0,z1:1.5,f:true});
-// low drawer unit (no TV)
-bx(2.86,3.24,0,.5,2.2,3.3,carcM,furn,true); bx(2.86,3.24,.5,.53,2.2,3.3,oak,furn);
-for(const y of[.18,.34]) bx(2.855,2.86,y-.003,y+.003,2.22,3.28,charcoal,furn);
-for(const y of[.1,.26,.42]) bx(2.84,2.855,y-.01,y+.01,2.65,2.85,steel,furn);
+const chairCol={x0:1.80,x1:2.32,z0:1.0,z1:1.5,f:true}; colliders.push(chairCol);
+// chest of drawers Dedeman Stefan, 3 drawers, white K524, 90x40x75, by the desk
+bx(2.84,3.24,0,.75,2.3,3.2,carcM,furn,true);
+for(const [y0,y1] of [[.03,.25],[.26,.49],[.50,.73]]){bx(2.825,2.84,y0,y1,2.305,3.195,carcM,furn);bx(2.81,2.825,y1-.05,y1-.035,2.65,2.85,steel,furn)}
 // curtains
-bx(.72,2.46,2.42,2.44,.08,.1,steel,furn);
-for(const [a,b] of [[.75,1.1],[2.08,2.43]]) bx(a,b,.08,2.42,.1,.14,curtainM,furn);
+// double track screwed into the ceiling, ~20 cm off the wall (clears sill + radiator)
+// back channel = white voile, front channel = grey blackout; 245 cm drop -> ~10 cm above floor
+{const trk=TM(lacqT,1,'#f4f4f2',{roughness:.4});
+ bx(.70,2.46,H-.03,H,.20,.31,trk,furn); bx(.70,2.46,H-.035,H-.03,.215,.225,trk,furn); bx(.70,2.46,H-.035,H-.03,.285,.295,trk,furn);
+ const voile=new THREE.MeshStandardMaterial({color:'#fbfbf8',transparent:true,opacity:.55,side:THREE.DoubleSide,roughness:1});
+ bx(.73,2.43,.11,H-.04,.217,.223,voile,furn);
+ for(const [a,b] of [[.73,1.08],[2.08,2.43]]) bx(a,b,.11,H-.04,.27,.31,curtainM,furn);}
 // wall-mounted AC on the outside wall, beside the window
 {const ac=TM(lacqT,1,'#fbfbfa',{roughness:.35});bx(2.5,3.24,2.2,2.49,.06,.27,ac,furn);
  bx(2.53,3.21,2.21,2.235,.2,.275,M('#3a3d3f',{roughness:.6}),furn);
  bx(2.53,3.21,2.38,2.46,.27,.272,M('#ececea',{roughness:.3}),furn);
  bx(3.08,3.16,2.33,2.36,.272,.274,new THREE.MeshStandardMaterial({color:'#bfe9ff',emissive:'#7fd3ff',emissiveIntensity:1}),furn);
  bx(3.2,3.24,1.9,2.2,.07,.12,whiteM,furn);}
-// plant
-cyl(.5,.5,0,.32,.14,M('#d5cec2'),furn,.11);
-for(const [dx,dy,dz,r] of [[0,.62,0,.22],[.1,.85,.05,.16],[-.08,.78,-.06,.15]]){const s=new THREE.Mesh(new THREE.IcosahedronGeometry(r,1),M('#5f7d55',{flatShading:true}));s.position.set(.5+dx,dy,.5+dz);furn.add(s)}
-colliders.push({x0:.36,x1:.64,z0:.36,z1:.64,f:true});
+// walking pad 127x52x13 cm: parked at the foot of the bed, slides under the desk in walking mode
+const padG=new THREE.Group(); furn.add(padG);
+{const add=(w,h,d,x,y,z,m)=>{const k=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),m);k.position.set(x,y,z);padG.add(k)};
+ const shell=M('#2b2e31',{roughness:.5}), belt=TM(fabricT,.05,'#1a1c1e',{roughness:1});
+ add(1.27,.11,.52,0,.055,0,shell); add(1.0,.012,.42,-.08,.116,0,belt);
+ add(.2,.13,.52,.535,.065,0,shell); add(.06,.004,.14,.53,.132,0,new THREE.MeshStandardMaterial({color:'#9fe0ff',emissive:'#58c8ff',emissiveIntensity:1}));
+ for(const z of[-.235,.235]) add(1.05,.02,.025,-.06,.115,z,M('#5a5f64',{roughness:.4}));}
+const PAD_PARK=[.9,3.3], PAD_USE=[2.6,1.25], CHAIR_HOME=[2.06,1.25], CHAIR_AWAY=[1.35,1.15]; // pad parks under the bed
+padG.position.set(...[PAD_PARK[0],0,PAD_PARK[1]]);
 
 // kitchen
 bx(3.36,3.92,0,.1,.1,2.6,charcoal,furn); bx(3.36,3.94,.1,.86,.1,2.6,carcM,furn,true);
@@ -430,17 +472,24 @@ bx(3.36,3.98,.86,.9,.1,2.6,stoneM,furn);
 for(const [a,b] of [[.1,.5],[1.1,1.65],[1.65,2.15]]){bx(3.94,3.96,.11,.85,a+.003,b-.003,frontM,furn);bx(3.96,3.975,.79,.81,(a+b)/2-.09,(a+b)/2+.09,steel,furn)}
 // splashback tiles between worktop and wall cabinets
 bx(3.36,3.365,.9,1.45,.1,2.6,TM(wallTile,.5,'#f6f3ec',{roughness:.3}),furn);
-// electric cooker (60 cm): oven door, control strip, ceramic top with 4 zones
-bx(3.94,3.96,.1,.86,.51,1.09,M('#e9eaea',{roughness:.3}),furn);
-bx(3.958,3.966,.2,.66,.56,1.04,M('#1d2124',{roughness:.08,metalness:.2}),furn);
-bx(3.96,3.99,.62,.64,.62,.98,steel,furn);
-bx(3.958,3.964,.72,.84,.53,1.07,M('#2a2e31',{roughness:.2}),furn);
-for(const z of[.6,.72,.88,1.0]) cyl(3.97,z,.78,.78,.018,steel,furn).rotation.z=Math.PI/2;
-for(const [x,z,r] of [[3.58,.65,.08],[3.58,.95,.1],[3.78,.65,.1],[3.78,.95,.08]]) cyl(x,z,.9,.902,r,M('#4a2a24',{roughness:.3}),furn);
-// dishwasher (45 cm slimline, next to the sink)
-bx(3.94,3.955,.1,.84,2.16,2.59,M('#c3c7ca',{metalness:.7,roughness:.3}),furn);
-bx(3.955,3.975,.74,.76,2.22,2.53,steel,furn); bx(3.955,3.958,.79,.83,2.2,2.3,black,furn);
-bx(3.36,3.96,.86,.9,.5,1.1,M('#141618',{roughness:.15}),furn);   // ceramic hob top
+// built-in Bosch pyrolytic oven (60 cm) in the base cabinet: drawer below, filler strip above
+bx(3.94,3.96,.11,.195,.503,1.097,frontM,furn); bx(3.96,3.975,.14,.155,.72,.88,steel,furn);   // drawer under the oven
+bx(3.94,3.96,.80,.855,.503,1.097,frontM,furn);                                                   // filler under the worktop
+const ovenGlass=M('#121416',{roughness:.06,metalness:.25});
+bx(3.94,3.962,.2,.795,.505,1.095,ovenGlass,furn);                                                // black glass front
+bx(3.962,3.965,.27,.66,.56,1.04,M('#22272b',{roughness:.03,metalness:.4}),furn);                 // door window
+bx(3.965,3.995,.675,.69,.57,1.03,steel,furn);                                                     // handle bar
+bx(3.962,3.964,.715,.785,.52,1.08,M('#1a1c1f',{roughness:.2}),furn);                             // control strip
+for(const z of[.58,1.02]) cyl(3.97,z,.742,.758,.022,steel,furn).rotation.z=Math.PI/2;           // flush knobs
+bx(3.964,3.966,.74,.76,.75,.85,new THREE.MeshStandardMaterial({color:'#ffffff',emissive:'#e8f2ff',emissiveIntensity:.8}),furn); // clock
+// induction hob: black glass set into the worktop, zones marked by thin rings, touch strip at the front
+for(const [x,z,r] of [[3.58,.66,.08],[3.58,.94,.1],[3.76,.66,.1],[3.76,.94,.08]]){
+  const ring=new THREE.Mesh(new THREE.TorusGeometry(r,.0025,6,48),M('#7d8389',{roughness:.4}));ring.rotation.x=Math.PI/2;ring.position.set(x,.907,z);furn.add(ring)}
+bx(3.86,3.9,.906,.907,.6,1.0,M('#3a3f44',{roughness:.3}),furn);
+// dishwasher (60 cm full-size, next to the sink)
+bx(3.94,3.955,.1,.84,2.16,2.74,M('#c3c7ca',{metalness:.7,roughness:.3}),furn);
+bx(3.955,3.975,.74,.76,2.25,2.65,steel,furn); bx(3.955,3.958,.79,.83,2.2,2.3,black,furn);
+bx(3.42,3.92,.9,.906,.52,1.08,M('#0e1012',{roughness:.08,metalness:.2}),furn);   // induction hob glass
 bx(3.45,3.88,.85,.905,1.65,2.15,M('#b8bcbf',{metalness:.7,roughness:.3}),furn); // sink
 cyl(3.42,1.9,.9,1.2,.012,steel,furn); bx(3.42,3.6,1.18,1.2,1.89,1.91,steel,furn);
 // wall cabinets: five doors in the front colour, bar handles, LED strip underneath
@@ -450,13 +499,18 @@ bx(3.42,3.64,1.438,1.45,.14,2.56,lampM,furn);
 {const l=new THREE.PointLight('#fff1dc',.35,2.2,2);l.position.set(3.6,1.3,1.6);furn.add(l)}
 bx(3.36,3.8,1.3,1.45,.5,1.1,M('#d9dadb',{metalness:.5}),furn);   // hood
 bx(3.42,3.8,.9,1.18,2.25,2.55,M('#2c2e30'),furn);                // microwave
-bx(3.36,3.98,0,1.85,2.62,3.22,TM(lacqT,1,'#f4f4f2',{roughness:.35}),furn,true); bx(3.98,3.985,.95,1.6,2.66,2.69,steel,furn); bx(3.98,3.985,1.15,1.6,3.15,3.18,steel,furn);
-// table + chairs + pendant
+// where the fridge was: 60 cm base unit with 3 drawers, worktop, splashback and wall cabinet continue
+bx(3.36,3.92,0,.1,2.6,3.2,charcoal,furn); bx(3.36,3.94,.1,.86,2.6,3.2,carcM,furn,true);
+bx(3.36,3.98,.86,.9,2.6,3.2,stoneM,furn);
+for(const [y0,y1] of [[.11,.355],[.36,.605],[.61,.85]]){bx(3.94,3.96,y0,y1,2.753,3.197,frontM,furn);bx(3.96,3.975,y1-.06,y1-.045,2.91,3.04,steel,furn)}
+bx(3.36,3.365,.9,1.45,2.6,3.2,TM(wallTile,.5,'#f6f3ec',{roughness:.3}),furn);
+bx(3.36,3.68,1.45,2.2,2.6,3.2,carcM,furn); bx(3.68,3.70,1.455,2.195,2.603,3.197,frontM,furn); bx(3.70,3.715,1.49,1.51,2.82,2.98,steel,furn);
+bx(3.42,3.64,1.438,1.45,2.6,3.16,lampM,furn);
+// table + chairs
 bx(4.5,5.04,.72,.75,.9,1.6,oak,furn,true);
 for(const [x,z] of [[4.52,.92],[4.52,1.55],[5.0,.92],[5.0,1.55]]) bx(x,x+.03,0,.72,z,z+.03,charcoal,furn);
 chair(4.77,.65,Math.PI,oak); chair(4.77,1.85,0,oak);
 colliders.push({x0:4.55,x1:5.0,z0:.42,z1:.88,f:true},{x0:4.55,x1:5.0,z0:1.62,z1:2.08,f:true});
-cyl(4.77,1.25,1.5,2.6,.004,charcoal,ceil); cyl(4.77,1.25,1.38,1.52,.04,warm,ceil,.17);
 
 // hall
 // hall nook: wall pier on the corridor side, water stub in the far corner
@@ -464,19 +518,31 @@ wallSeg(4.5,5.04,3.95,4.2,0,H);
 bx(4.49,4.5,1.32,1.4,4.05,4.11,whiteM,fixed);                                         // light switch on the pier
 bx(4.52,4.98,.03,.07,5.5,5.54,whiteM,fixed); // pipe along the wall
 for(const y of[.3,.5]){cyl(4.98,5.46,y-.02,y+.02,.02,whiteM,fixed);bx(4.93,4.97,y-.015,y+.015,5.41,5.51,M('#c8352d'),fixed)}
-// washing machine (60 cm) on the water stub, front facing the hall
-bx(4.46,5.02,0,.85,4.9,5.5,M('#fafafa',{roughness:.35}),furn,true);
-bx(4.445,4.46,.72,.84,4.93,5.47,M('#e4e6e7'),furn);
-{const r=new THREE.Mesh(new THREE.TorusGeometry(.17,.03,12,32),M('#b9bec2',{metalness:.7,roughness:.3}));r.rotation.y=Math.PI/2;r.position.set(4.44,.42,5.2);furn.add(r);
- const d=new THREE.Mesh(new THREE.CircleGeometry(.15,32),M('#2f3a40',{roughness:.1,metalness:.3}));d.rotation.y=-Math.PI/2;d.position.set(4.445,.42,5.2);furn.add(d);}
-cyl(4.45,5.01,.79,.79,.025,M('#9aa0a4',{metalness:.6}),furn).rotation.z=Math.PI/2;
-// small cupboard above the washer
-bx(4.72,5.04,1.35,1.95,4.9,5.5,carcM,furn); bx(4.70,4.72,1.355,1.945,4.903,5.197,frontM,furn); bx(4.70,4.72,1.355,1.945,5.203,5.497,frontM,furn);
-for(const z of[5.16,5.24]) bx(4.685,4.695,1.42,1.6,z-.008,z+.008,charcoal,furn);
-// tall cupboard in the corner against the pier: coats, vacuum, cleaning stuff
-bx(4.46,5.04,0,2.2,4.22,4.84,carcM,furn,true);
-bx(4.44,4.46,.02,2.18,4.225,4.527,frontM,furn); bx(4.44,4.46,.02,2.18,4.533,4.835,frontM,furn);
-for(const z of[4.49,4.57]) bx(4.425,4.44,.95,1.35,z-.008,z+.008,charcoal,furn);
+// LEFT (against the pier): Miele washer with the clothes cupboard above; hoses run ~60 cm behind the fridge to the water stub
+const mieleW=M('#f6f6f3',{roughness:.3}), mieleP=M('#e9e9e5',{roughness:.25}), graph=M('#3b3f43',{roughness:.3,metalness:.4});
+function mieleUnit(y0,z0){const z1=z0+.6,zc=z0+.3;
+  bx(4.40,5.02,y0,y0+.85,z0,z1,mieleW,furn,true);                                  // body 60x64x85
+  bx(4.39,4.40,y0+.72,y0+.84,z0+.02,z1-.02,mieleP,furn);                            // control panel
+  bx(4.385,4.39,y0+.75,y0+.81,zc-.12,zc+.12,M('#101214',{roughness:.1}),furn);      // display
+  bx(4.384,4.386,y0+.77,y0+.79,zc-.08,zc+.02,new THREE.MeshStandardMaterial({color:'#ffd9a0',emissive:'#ffb347',emissiveIntensity:.9}),furn);
+  cyl(4.385,z1-.08,y0+.772,y0+.788,.028,graph,furn).rotation.z=Math.PI/2;          // program dial
+  {const r=new THREE.Mesh(new THREE.TorusGeometry(.19,.035,14,40),graph);r.rotation.y=Math.PI/2;r.position.set(4.385,y0+.4,zc);furn.add(r);
+   const d=new THREE.Mesh(new THREE.CircleGeometry(.17,40),M('#2f3a40',{roughness:.08,metalness:.3}));d.rotation.y=-Math.PI/2;d.position.set(4.383,y0+.4,zc);furn.add(d);}
+  bx(4.39,4.40,y0+.02,y0+.08,z0+.02,z1-.02,mieleP,furn);                            // kick strip / filter flap
+}
+mieleUnit(0,4.22);
+// clothes cupboard above the washer: 10 cm gap, full depth, two doors
+bx(4.44,5.04,.95,2.45,4.22,4.84,carcM,furn);
+bx(4.42,4.44,.955,2.445,4.223,4.527,frontM,furn); bx(4.42,4.44,.955,2.445,4.533,4.837,frontM,furn);
+for(const z of[4.49,4.57]) bx(4.405,4.42,1.35,1.75,z-.008,z+.008,charcoal,furn);
+// RIGHT corner: Beko built-in fridge-freezer column; doors hinged on the right (wall side), handles on the left
+bx(4.44,5.04,0,2.45,4.88,5.52,carcM,furn,true); bx(4.46,5.04,0,.1,4.88,5.52,charcoal,furn);
+bx(4.42,4.44,.105,.79,4.883,5.517,frontM,furn);    // freezer door
+bx(4.42,4.44,.795,1.86,4.883,5.517,frontM,furn);   // fridge door
+bx(4.42,4.44,1.865,2.445,4.883,5.517,frontM,furn); // top cupboard
+bx(4.405,4.42,.45,.7,4.91,4.93,steel,furn); bx(4.405,4.42,.9,1.3,4.91,4.93,steel,furn); bx(4.405,4.42,1.9,2.0,4.91,4.93,steel,furn);
+for(const y of[.2,.6,1.0,1.5,1.75]) bx(4.415,4.42,y,y+.04,5.505,5.515,M('#9aa0a4',{metalness:.5}),furn); // hinge marks on the right edge
+bx(4.455,4.46,.02,.08,4.92,5.48,M('#2a2c2e'),furn); // ventilation grille in the plinth
 bx(3.45,4.25,0,.42,5.24,5.54,oak,furn,true); bx(3.47,4.23,.42,.48,5.25,5.53,sage,furn);
 bx(3.6,4.1,1.0,1.75,5.52,5.54,M('#cdd9dd',{metalness:.9,roughness:.05}),furn); bx(3.58,4.12,.98,1.77,5.535,5.545,oakDark,furn);
 bx(2.45,3.25,0,.012,4.95,5.45,TM(rugT,.3,'#5b5148',{roughness:1}),furn);
@@ -484,10 +550,7 @@ bx(2.45,3.25,0,.012,4.95,5.45,TM(rugT,.3,'#5b5148',{roughness:1}),furn);
 
 /* ---------- colour schemes ---------- */
 const SCHEMES=[
-  {name:'Salvie & stejar',front:'#8fa58a',wood:'#c8a983',woodDark:'#9a7b58',textile:'#8ba082',rug:'#b9ab99',curtain:'#e6dfd2'},
-  {name:'Bleumarin & nuc',front:'#34465f',wood:'#8a5e3e',woodDark:'#5e3f2a',textile:'#3f5474',rug:'#b4a796',curtain:'#ddd6ca'},
-  {name:'Alb cald & teracotă',front:'#ece6dc',wood:'#d9c19b',woodDark:'#b09270',textile:'#c07a5a',rug:'#d9ccb8',curtain:'#efe9df'},
-  {name:'Grafit & stejar',front:'#4b4f53',wood:'#b8915f',woodDark:'#8a6a45',textile:'#9a9fa3',rug:'#8f8a84',curtain:'#d3cfc7'}];
+  {name:'Bleumarin & nuc',front:'#34465f',wood:'#8a5e3e',woodDark:'#5e3f2a',textile:'#3f5474',rug:'#5d6b80',curtain:'#8e9297'}];
 const swWrap=document.getElementById('swatches'), swName=document.getElementById('scheme-name');
 function applyScheme(i){const s=SCHEMES[i];frontM.color.set(s.front);oak.color.set(s.wood);oakDark.color.set(s.woodDark);
   sage.color.set(s.textile);rugM.color.set(s.rug);curtainM.color.set(s.curtain);swName.textContent=s.name;
@@ -511,7 +574,7 @@ const keys={}, joy={x:0,y:0};
 const hint=document.getElementById('hint'), joyEl=document.getElementById('joy'), knob=document.getElementById('knob');
 const coarse=matchMedia('(pointer:coarse)').matches;
 const lookAt=(x,z,tx,tz)=>{walk.x=x;walk.z=z;walk.yaw=Math.atan2(-(tx-x),-(tz-z));walk.pitch=-0.08};
-const spots={room:[2.3,3.75,.6,.9],kitchen:[4.2,3.7,4.1,0],bath:[1.8,4.5,.3,5.1],hall:[3.7,4.5,2.7,5.6]};
+const spots={room:[2.75,3.6,.3,1.5],kitchen:[4.2,3.7,4.1,0],bath:[1.8,4.5,.3,5.1],hall:[3.7,4.5,2.7,5.6]};
 
 function setMode(m){mode=m;
   for(const [id,v] of [['m-walk','walk'],['m-3d','3d'],['m-plan','plan']]) document.getElementById(id).setAttribute('aria-pressed',String(v===m));
@@ -561,16 +624,27 @@ function moveJoy(ev){const r=joyEl.getBoundingClientRect();let x=(ev.clientX-r.l
   const l=Math.hypot(x,y);if(l>1){x/=l;y/=l}joy.x=x;joy.y=y;knob.style.transform=`translate(${x*34}px,${y*34}px)`}
 
 /* desk remote: 62–127 cm, moves ~4 cm/s like a real motor */
-const desk={h:72,target:null,dir:0}, deskOut=document.getElementById('desk-h'), remote=document.getElementById('remote');
+const desk={h:77,target:null,dir:0,walk:false}, deskOut=document.getElementById('desk-h'), remote=document.getElementById('remote');
+if(matchMedia('(max-width:560px)').matches) remote.open=false; // start folded on phones
 const hold=(id,d)=>{const b=document.getElementById(id);
   b.addEventListener('pointerdown',ev=>{b.setPointerCapture(ev.pointerId);desk.dir=d;desk.target=null;b.classList.add('on')});
   const stop=()=>{desk.dir=0;b.classList.remove('on')};b.addEventListener('pointerup',stop);b.addEventListener('pointercancel',stop);b.addEventListener('lostpointercapture',stop)};
 hold('d-up',1); hold('d-down',-1);
-document.getElementById('d-sit').onclick=()=>{desk.target=72;desk.dir=0};
-document.getElementById('d-stand').onclick=()=>{desk.target=112;desk.dir=0};
+// presets for a 186 cm user, elbow at 115 cm: sitting 77, standing 115, walking 128 (115 + 13 cm pad deck)
+const note=document.getElementById('desk-note');
+const preset=(h,walk,txt)=>{desk.target=h;desk.dir=0;desk.walk=walk;note.textContent=txt};
+document.getElementById('d-sit').onclick=()=>preset(77,false,'Șezut: 77 cm · banda stă sub pat');
+document.getElementById('d-stand').onclick=()=>preset(115,false,'În picioare: 115 cm (cot la 115 cm)');
+document.getElementById('d-walk').onclick=()=>preset(128,true,'Mers: 128 cm · banda sub birou, scaunul lângă comodă');
+deskTop.position.y=(desk.h-72)/100;
+function stepPad(dt){const k=1-Math.exp(-dt*3);
+  const pt=desk.walk?PAD_USE:PAD_PARK, ct=desk.walk?CHAIR_AWAY:CHAIR_HOME;
+  padG.position.x+=(pt[0]-padG.position.x)*k; padG.position.z+=(pt[1]-padG.position.z)*k;
+  chairG.position.x+=(ct[0]-chairG.position.x)*k; chairG.position.z+=(ct[1]-chairG.position.z)*k;
+  chairCol.x0=chairG.position.x-.26;chairCol.x1=chairG.position.x+.26;chairCol.z0=chairG.position.z-.25;chairCol.z1=chairG.position.z+.25}
 function stepDesk(dt){let v=0;
   if(desk.dir)v=desk.dir*4*dt; else if(desk.target!=null){const d=desk.target-desk.h;v=Math.sign(d)*Math.min(Math.abs(d),6*dt);if(Math.abs(d)<.05)desk.target=null}
-  if(!v)return; desk.h=THREE.MathUtils.clamp(desk.h+v,62,127); deskTop.position.y=(desk.h-72)/100; deskOut.textContent=Math.round(desk.h)+' cm'}
+  if(!v)return; desk.h=THREE.MathUtils.clamp(desk.h+v,64.5,130.5); deskTop.position.y=(desk.h-72)/100; deskOut.textContent=Math.round(desk.h)+' cm'}
 
 /* collision */
 const R=.2;
@@ -581,7 +655,7 @@ function blocked(x,z){if(x<R||x>5.1-R||z<R||z>5.6-R)return true;
 function resize(){const w=app.clientWidth,h=app.clientHeight;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix()}
 addEventListener('resize',resize); resize(); setMode('3d');
 const clock=new THREE.Clock();
-renderer.setAnimationLoop(()=>{const dt=Math.min(clock.getDelta(),.05); stepDesk(dt);
+renderer.setAnimationLoop(()=>{const dt=Math.min(clock.getDelta(),.05); stepDesk(dt); stepPad(dt);
   if(mode==='walk'){
     let f=(keys.w||keys.arrowup?1:0)-(keys.s||keys.arrowdown?1:0)-joy.y, s=(keys.d?1:0)-(keys.a?1:0)+joy.x;
     if(keys.arrowleft)walk.yaw+=dt*1.8; if(keys.arrowright)walk.yaw-=dt*1.8;
@@ -599,4 +673,5 @@ renderer.setAnimationLoop(()=>{const dt=Math.min(clock.getDelta(),.05); stepDesk
 })();
 </script>
 
-</body></html>
+</body>
+</html>
